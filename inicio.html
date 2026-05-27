@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script/script.js" defer></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Task Manager</h1>
+    </header>
+    <main>
+        <section>
+            <div id="inicio">
+                <h2>Table de Tasks</h2>
+                <input id="content_search" type="search" placeholder="Enter...">
+                <button id="search">Search</button>
+            </div>
+            <table id="view-list">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Stats</th>
+                    </tr>
+                </thead>
+                <tbody id="task-list">
+                    <!-- As tarefas serão adicionadas aqui dinamicamente -->
+                </tbody>
+            </table>
+        </section>
+        <section id="add">
+            <h2>Add new task</h2>
+            <input type="date" id="date">
+            <input type="text" id="content" placeholder="Content">
+            <label for="stats">Stats:</label>
+            <select id="stats">
+                <option value="" disabled selected>Select</option>
+                <option value="Pending">Pending</option>
+                <option value="In progress">In progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+            <label for="priority">Priority:</label>
+            <select id="priority">
+                <option value="" disabled selected>Select</option>
+                <option value="Baixa">Low</option>
+                <option value="Média">Medium</option>
+                <option value="Alta">High</option>
+            </select>
+            <button id="btnAdd">ADD</button>
+        </section>
+    </main>
+    <footer>
+        <h4>DEV <a style="font-style: italic; color: palevioletred;" href="https://www.instagram.com/luiz_fili3.14/" target="_blank">FILI3,14</a></h4>
+        <p>Create and track the progress of your tasks.</p>
+        <p><i>Copyright©</i></p>
+    </footer>
+</body>
+</html>

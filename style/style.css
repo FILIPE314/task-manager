@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: #0F172A;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F8FAFC;
+    animation: top 1s linear;
+    padding: 5%;
+}
+
+#inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #F8FAFC;
+}
+
+@keyframes top{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes bottom{
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.s-pendente {
+    color: red
+}
+
+.s-concluida {
+    color: green;
+}
+
+.s-em-andamento {
+    color: blue;
+}
+
+body {
+    text-align: center;
+    background-color: #1E293B;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes linhaSubindo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#content_search {
+    margin-block: 5%;
+}
+
+table {
+    width: 96%;
+    border-collapse: collapse;
+    margin-inline: 2%;
+
+    & tr {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        justify-items: center;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: linhaSubindo 1s ease forwards;
+    }
+
+    & th {
+        background-color: #334155;
+        color: #F8FAFC;
+    }
+
+    & td {
+        background-color: #06B6D4;
+    }
+
+    & th, td {
+        border: 1px solid transparent;
+        padding: 8px;
+        text-align: left;
+    }
+}
+
+#add {
+    margin-block: 5%;
+    color: #F8FAFC;
+    display: flex;
+    flex-direction: column;
+    margin-inline: 30%;
+}
+
+input, label, select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+}
+
+option {
+    background-color: white;
+}
+
+input, select, ::placeholder {
+    background-color: #06B6D4;
+    color: black;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0;
+    background-color: lightgreen;
+    box-shadow: 0 0 15px palegreen;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#edit {
+    background-color: paleturquoise;
+    position: relative;
+    box-shadow: 0 0 15px paleturquoise;
+}
+
+#exclude {
+    background-color: palevioletred;
+    margin-left: 10%;
+    position: relative;
+    box-shadow: 0 0 15px palevioletred;
+}
+
+input, button, label, select {
+    margin-block: 2%;
+    font-size: medium;
+    animation: bottom 1s ease forwards;
+}
+
+footer {
+    background-color: #0F172A;
+    color: #F8FAFC;
+    width: 100%;
+    padding-block: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    animation: bottom 1s linear;
+    gap: 50px;
+
+    & a {
+        text-decoration: none;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 540px) {
+  body {
+    height: auto;
+
+  }
+
+  #inicio {
+    margin-block: 6%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding-inline: 10%;
+  }
+
+  table {
+    width: 100%;
+    margin-inline: 0;
+    font-size: 0.95rem;
+  }
+
+  table th,
+  table td {
+    padding: 6px;
+  }
+
+  #add {
+    margin-inline: 5%;
+    width: auto;
+
+    & h2 {
+        margin-bottom: 5%;
+    }
+  }
+
+  input,
+  select,
+  button {
+    width: 80%;
+    max-width: none;
+    margin-inline: 10%;
+    font-size: small;
+  }
+
+  footer {
+    padding-block: 20px;
+    gap: 16px;
+  }
+}
+
